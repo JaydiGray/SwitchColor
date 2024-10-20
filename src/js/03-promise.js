@@ -30,7 +30,6 @@ function onSubmit(e) {
   let delay = +formEl.querySelector('input[name="delay"]').value;
 
   let counter = 0;
-  let totalDelay = delay;
 
   setTimeout(() => {
     let intervalId = null;
