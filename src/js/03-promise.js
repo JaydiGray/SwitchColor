@@ -46,13 +46,13 @@ function onSubmit(e) {
       createPromise(counter, step)
         .then(({ position, delay }) => {
           Notiflix.Notify.success(
-            `✅ Fulfilled promise ${position} in ${totalDelay}ms`
+            `✅ Fulfilled promise ${position} in ${delay}ms`
           );
           totalDelay += step;
         })
         .catch(({ position, delay }) => {
           Notiflix.Notify.failure(
-            `❌ Rejected promise ${position} in ${totalDelay}ms`
+            `❌ Rejected promise ${position} in ${delay}ms`
           );
           totalDelay += step;
         });
